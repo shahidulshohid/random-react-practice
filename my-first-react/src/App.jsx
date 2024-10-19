@@ -1,39 +1,21 @@
 
 import './App.css'
-import AdminPanel from './cmoponents/AdmiPanel';
-import LoginForm from './cmoponents/LoginForm';
-// import AboutPage from './cmoponents/AboutPage'
-// import MyButton from './cmoponents/MyButton'
-import myImg from './images/Mask Group.png'
 
 function App() {
-  const user = {
-    name: 'Hedy Lamarr',
-    imageSize: 90,
-  };
 
-  let isLoggedIn = false
+  const products = [
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+  ];
 
+  const listItems = products.map((product) => {
+    return <li key={product.id} style={{color:'teat', fontSize:'20px', listStyle:'none'}}>{product.title}</li>
+  })
+  
   return (
-    <>
-      {/* <h1>Welcome to my app</h1>
-      <MyButton></MyButton>
-      <AboutPage></AboutPage> */}
-    
-
-    <h2>{user.name}</h2>
-    <img src={myImg} alt="" style={{width:user.imageSize, height:user.imageSize}}/>
-
-    {/* condition rendering  */}
-    {
-      // isLoggedIn ? <AdminPanel></AdminPanel> : <LoginForm></LoginForm>
-    }
-
-    {
-      isLoggedIn ? <LoginForm></LoginForm> : <AdminPanel></AdminPanel>
-    }
-    </>
-  )
+    <ul>{listItems}</ul>
+  );
 }
 
 export default App
