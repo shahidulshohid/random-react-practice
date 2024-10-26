@@ -23,6 +23,8 @@ const PermissionLevel = ({ permissionLevel }) => {
       return <p>You can red.</p>;
     case "write":
       return <p>You can red and write</p>;
+      case 'error':
+      return <p>You can not read and write anything</p>
     default:
       return <p>No access</p>;
   }

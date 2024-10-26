@@ -5,6 +5,18 @@
   text-align: center;
 }
 
+
+.active {
+  background-color: red;
+  color: black;
+}
+
+.btn{
+  background-color: green;
+  color: white;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;

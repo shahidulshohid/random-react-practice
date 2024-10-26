@@ -1,16 +1,22 @@
+import { useState } from 'react';
 import AccessLevel from './AccessLevel';
 import LoadingState from './LoadingState';
 import PermissionLevel from './PermissionLevel';
 import PropsHandle from './PropsHandle1';
 import Showbtn from './Showbtn';
+import UserSataus from './UserSataus';
 
 const PropsHandleAll = () =>{
+const username = "Shahidul islam";
 const isLoggedIn = false;
 const isAdmin = true;
 const isShowBtn = true;
 const isLoading = false;
-const permissionLevel = 'write';
-const username = "Shahidul islam";
+const permissionLevel = 'error';
+const [isActive, setIsActive] = useState(true);
+const toggle = () =>{
+    setIsActive(!isActive)
+}
     return (
         <div>
             <PropsHandle isLoggedIn={isLoggedIn} username={username}></PropsHandle>
@@ -18,6 +24,7 @@ const username = "Shahidul islam";
             <Showbtn isShowBtn={isShowBtn}></Showbtn>
             <LoadingState isLoading={isLoading}></LoadingState>
             <PermissionLevel permissionLevel={permissionLevel}></PermissionLevel>
+            <UserSataus isActive={isActive} toggle={toggle}></UserSataus>
             </div>
     );
 };
