@@ -5,6 +5,7 @@ import PermissionLevel from './PermissionLevel';
 import PropsHandle from './PropsHandle1';
 import Showbtn from './Showbtn';
 import UserSataus from './UserSataus';
+import MyButton from './MyButton';
 
 const PropsHandleAll = () =>{
 const username = "Shahidul islam";
@@ -25,6 +26,7 @@ const toggle = () =>{
             <LoadingState isLoading={isLoading}></LoadingState>
             <PermissionLevel permissionLevel={permissionLevel}></PermissionLevel>
             <UserSataus isActive={isActive} toggle={toggle}></UserSataus>
+            <MyButton isActive={isActive} toggle={toggle}></MyButton>
             </div>
     );
 };

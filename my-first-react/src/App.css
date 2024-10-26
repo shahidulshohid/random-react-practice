@@ -16,6 +16,11 @@
   color: white;
 }
 
+.my-button {
+  background-color: aqua;
+  color: black;
+}
+
 
 .logo {
   height: 6em;
