@@ -1,5 +1,6 @@
 import AccessLevel from './AccessLevel';
 import LoadingState from './LoadingState';
+import PermissionLevel from './PermissionLevel';
 import PropsHandle from './PropsHandle1';
 import Showbtn from './Showbtn';
 
@@ -8,6 +9,7 @@ const isLoggedIn = false;
 const isAdmin = true;
 const isShowBtn = true;
 const isLoading = false;
+const permissionLevel = 'write';
 const username = "Shahidul islam";
     return (
         <div>
@@ -15,7 +17,8 @@ const username = "Shahidul islam";
             <AccessLevel isAdmin={isAdmin}></AccessLevel>
             <Showbtn isShowBtn={isShowBtn}></Showbtn>
             <LoadingState isLoading={isLoading}></LoadingState>
-        </div>
+            <PermissionLevel permissionLevel={permissionLevel}></PermissionLevel>
+            </div>
     );
 };
 
