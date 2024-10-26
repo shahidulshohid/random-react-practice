@@ -1,27 +1,13 @@
 
-import { useState } from 'react';
 import './App.css'
-import MyButton from './cmoponents/MyButton';
-// import MyProducts from './cmoponents/myProducts';
-// import ShoppingList from './cmoponents/ShoppingList';
+import PropsHandleAll from './components/PropsHandle/PropsHandleAll'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  function handleClick(){
-    setCount(count + 1)
-  }
-  
   return (
     <div>
-      {/* <MyProducts></MyProducts> */}
-      {/* <ShoppingList></ShoppingList> */}
-
-      <h1>Counters that update separately</h1>
-      <MyButton count={count} onClick={handleClick}></MyButton>
-      <MyButton count={count} onClick={handleClick}></MyButton>
+      <PropsHandleAll></PropsHandleAll>
     </div>
-  );
+  )
 }
 
 export default App
